@@ -1,4 +1,4 @@
-# PHP Skills Test test
+# Restful CRUD PHP sample
 
 ## Server Requirements
 - PHP >= 7
