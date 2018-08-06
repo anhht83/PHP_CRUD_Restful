@@ -1,0 +1,33 @@
+{
+  "name": "php/crud",
+  "description": "Test CRUD PHP app",
+  "authors": [
+    {
+      "name": "Anh Tuan Hoang",
+      "email": "anhht83@gmail.com"
+    }
+  ],
+  "keywords": [
+    "scopic",
+    "php",
+    "ajax",
+    "crud"
+  ],
+  "version": "0.1",
+  "license": "",
+  "require": {
+    "php": ">=7"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

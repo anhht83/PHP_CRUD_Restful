@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10Up - PHP sample</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
+    <link href="./css/whirl.min.css" rel="stylesheet"/>
+    <link href="./css/main.css" rel="stylesheet"/>
+
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Add to Stock
+        </div>
+        <div class="card-body">
+            <form onsubmit="return false;" class="needs-validation" novalidate id="item-form">
+                <div class="alert alert-message"></div>
+                <div class="row">
+                    <div class="form-group col-5">
+                        <input type="text" class="form-control" id="product_name" placeholder="Product name"
+                               name="product_name" required>
+                        <div class="invalid-feedback">This field is invalid</div>
+                    </div>
+                    <div class="form-group col-3">
+                        <input type="number" step="1" min="0" class="form-control" id="quantity"
+                               placeholder="Quantity in stock" name="quantity" required/>
+                        <div class="invalid-feedback">This field is invalid</div>
+                    </div>
+                    <div class="form-group col-3">
+                        <input type="number" min="0" class="form-control" id="price" placeholder="Price per item"
+                               name="price" required/>
+                        <div class="invalid-feedback">This field is invalid</div>
+                    </div>
+                    <div class="form-group col-1">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <hr />
+    <div class="card">
+        <div class="card-header">
+            Stock
+        </div>
+        <div class="card-body">
+            <table id="items" class="table table-striped table-bordered dataTable" style="width:100%">
+                <thead>
+                <tr>
+                    <th>Product name</th>
+                    <th>Created At</th>
+                    <th>Product quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot>
+                <tr>
+                    <th colspan="4" style="text-align:right">Total:</th>
+                    <th></th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
+<script src="./js/main.js"></script>
+</body>
+</html>
